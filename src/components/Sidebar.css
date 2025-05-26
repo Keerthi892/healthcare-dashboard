@@ -33,7 +33,7 @@
   .sidebar li:hover {
     border-radius: 6px;
     padding-left: 4px;
-    color: #3b82f6; /* blue on hover */
+    color: #3b82f6; 
   }
   
   .sidebar li:hover .icon {
@@ -54,7 +54,6 @@
     padding-top: 20px;
   }
   
-  /* Sidebar item base style */
   .sidebar-item {
     padding: 10px 15px;
     display: flex;
@@ -63,14 +62,10 @@
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     color: #333;
   }
-  
-  /* Hover effect */
   .sidebar-item:hover {
     color: #2563eb;
     transform: scale(1.05);
   }
-  
-  /* Active item effect */
   .sidebar-item.active {
     color: #3b82f6;
     font-weight: 600;
@@ -79,8 +74,6 @@
     background-color: #f0f4ff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
-  
-  /* Ensure icon color matches text color on active */
   .sidebar-item.active .icon {
     color: #3b82f6;
   }

@@ -99,7 +99,7 @@ h3{
   font-weight: 600;
 }
 .calendar-cell.appointment.grey {
-  background-color: #95a1ca; /* light grey or whatever your grey is */
+  background-color: #95a1ca; 
   position: relative;
 }
 
@@ -108,7 +108,7 @@ h3{
   width: 4px;
   height: 4px;
   background-color: #ebecf0;
-  color:  #ebecf0; /* dot color */
+  color:  #ebecf0; 
   border-radius: 50%;
   position: absolute;
   top: 80%;

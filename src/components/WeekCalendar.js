@@ -39,11 +39,11 @@ const getCellStyle = (row, col) => {
 
 const WeekCalendar = () => {
   const handlePrevious = () => {
-    // handle previous week logic
+    
   };
 
   const handleNext = () => {
-    // handle next week logic
+    
   };
 
   return (

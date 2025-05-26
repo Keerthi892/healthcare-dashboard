@@ -52,7 +52,6 @@ const appointments = [
   },
 ];
 
-// Group appointments by day (max 2 per day)
 const groupByDay = (appointments) => {
   return appointments.reduce((acc, appt) => {
     if (!acc[appt.day]) acc[appt.day] = [];

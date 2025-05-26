@@ -1,6 +1,6 @@
 import React from 'react';
 import './BodyDiagram.css';
-import HumanBody from '../assets/human-body.jpg'; // Ensure correct path
+import HumanBody from '../assets/human-body.jpg'; 
 
 function BodyDiagram() {
   return (

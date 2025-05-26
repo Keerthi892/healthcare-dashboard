@@ -85,7 +85,7 @@
   margin: 0 40px;
   gap: 4px;
   font-size: 11px;
-  color: #a0a0a0; /* light grey */
+  color: #a0a0a0; 
   cursor: pointer;
   transition: color 0.2s ease;
 }
@@ -102,6 +102,6 @@
   display: flex;
   align-items: center;
   font-size: 10px;
-  color: #a0a0a0; /* light grey */
+  color: #a0a0a0; 
 }
 

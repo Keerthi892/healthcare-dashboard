@@ -16,7 +16,7 @@
     margin-top: 10px;
   }
   
-  /* Common label styling */
+
   .label {
     position: absolute;
     background-color: rgba(59, 130, 246, 0.9);
@@ -28,8 +28,6 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
   }
-  
-  /* Position labels based on reference pic */
   .heart-label {
     top: 29%;
     left: 69%;

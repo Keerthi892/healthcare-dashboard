@@ -78,11 +78,11 @@
   }
   
   .health {
-    color: #0ae5ec; /* Indigo / Primary color */
+    color: #0ae5ec; 
   }
   
   .care {
-    color: #4423d5; /* Teal / Accent color */
+    color: #4423d5; 
   }
   .search-wrapper {
     position: relative;

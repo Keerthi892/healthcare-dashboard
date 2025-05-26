@@ -29,7 +29,7 @@ const cardsData = [
 function DashboardCards() {
   return (
     <div className="dashboard-section">
-      {/* Top Header */}
+      { }
       <div className="dashboard-header">
         <div className="week-indicator">
           <span>This Week</span>
@@ -37,7 +37,7 @@ function DashboardCards() {
         </div>
       </div>
 
-      {/* Cards */}
+      { }
       <div className="dashboard-cards">
         {cardsData.map((card, index) => (
           <div className="card" key={index}>

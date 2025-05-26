@@ -17,7 +17,7 @@ const DonutChart = () => {
     },
   };
 
-  const chartSeries = [45, 35, 20]; // Adjust these values based on real data
+  const chartSeries = [45, 35, 20]; 
 
   return (
     <div className="donut-chart-container">
