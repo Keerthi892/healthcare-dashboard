@@ -1,0 +1,117 @@
+.calendar-container {
+  max-width: 800px;
+  /* margin: 0 auto; */
+  font-family: sans-serif;
+  /* text-align: center; */
+  font-size: 9px;
+  padding:0px;
+}
+
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-row {
+  display: flex;
+}
+
+.calendar-cell {
+  /* border: 1px solid #ccc; */
+  padding:10px;
+  width: 120px;
+  /* height:7px; */
+  text-align: center;
+  border-radius: 11px;
+  padding-top: 8px;
+  
+}
+
+.header-row .calendar-cell {
+  font-weight: bold;
+  /* background-color: #f2f2f2; */
+}
+
+.appointment.blue {
+  background-color: #4423d5;
+  color: white;
+}
+
+.appointment.grey {
+  background-color: #859bcf;
+  color: white;
+  
+}
+
+.empty {
+  background-color: #fff;
+}
+.date {
+  font-size: 15px;
+    color: #3f608f;
+    padding: 6px;
+}
+h3{
+  padding:0px !important;
+}
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  position: relative;
+}
+
+.calendar-header h2 {
+  flex-grow: 1;
+}
+
+.nav-controls {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-button {
+  background-color: #fefefe;
+  border: none;
+  padding: 4px 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #007bff;
+}
+
+
+.calendar-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.calendar-cell.appointment.grey {
+  background-color: #95a1ca; /* light grey or whatever your grey is */
+  position: relative;
+}
+
+.calendar-cell.appointment.grey::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background-color: #ebecf0;
+  color:  #ebecf0; /* dot color */
+  border-radius: 50%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

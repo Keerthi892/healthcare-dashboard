@@ -1,0 +1,41 @@
+.notifications-panel {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .notifications-panel h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .notification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .notification-item .icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+  
+  .notification-item .details {
+    flex: 1;
+  }
+  
+  .notification-item .message {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+  }
+  
+  .notification-item .time {
+    font-size: 12px;
+    color: #888;
+  }
+  

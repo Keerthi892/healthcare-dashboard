@@ -1,0 +1,107 @@
+/* src/components/DashboardCards.css */
+.dashboard-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-left: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 0px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  width: 118px;
+  margin: 10px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+/* .icon {
+  font-size: 20px;
+} */
+
+.dates {
+  font-size: 10px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.progress-bar {
+  background: #eee;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 8px;
+  width:200px;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 40px 0 0;
+}
+
+.week-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #a0a0a0; /* light grey */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.week-indicator svg {
+  color: #a0a0a0; /* make icon also light grey */
+  font-size: 10px;
+}
+
+.week-indicator:hover {
+  color: #4f46e5;
+}
+
+.week-indicator:hover svg {
+  color: #4f46e5;
+}.details-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 40px;
+  gap: 4px;
+  font-size: 11px;
+  color: #a0a0a0; /* light grey */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.details-header:hover {
+  color: #4f46e5;
+}
+
+.details-header:hover .details-chevron {
+  color: #4f46e5;
+}
+
+.details-chevron {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #a0a0a0; /* light grey */
+}
+

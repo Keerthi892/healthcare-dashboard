@@ -1,0 +1,68 @@
+.schedule-panel {
+    padding: 5px;
+    font-size: 12px !important;
+  }
+  
+  .schedule-panel h3 {
+    /* Optional heading margin if needed */
+  }
+  
+  /* Container for 1 or 2 cards */
+  .schedule-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  /* Single card full-width layout */
+  .schedule-row.single .schedule-card {
+    width: 100%;
+  }
+  
+  /* Cards */
+  .schedule-card {
+    position: relative; /* Needed for emoji top-right */
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1;
+    font-size: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Appointment Type Colors */
+  .schedule-card.dentist {
+    background-color: #4423d5;
+    color: white;
+  }
+  
+  .schedule-card.physio {
+    background-color: #d9e2fc;
+    color: rgb(63, 63, 63);
+  }
+  
+  .schedule-card.checkup {
+    background-color: #d9e2fc;
+    color: rgb(63, 63, 63);
+  }
+  
+  /* Text Content */
+  .title {
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .time {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+  
+  /* Top-right Emoji */
+  .emoji-corner {
+    position: absolute;
+    top: 32px;
+    right: 12px;
+    font-size: 20px;
+  }
+  

@@ -1,0 +1,45 @@
+.body-diagram {
+    position: relative;
+    background: white;
+    padding: 0px;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+  }
+  
+  .body-diagram img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    height: 340px;
+    margin-top: 10px;
+  }
+  
+  /* Common label styling */
+  .label {
+    position: absolute;
+    background-color: rgba(59, 130, 246, 0.9);
+    color: white;
+    padding: 4px 6px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }
+  
+  /* Position labels based on reference pic */
+  .heart-label {
+    top: 29%;
+    left: 69%;
+    background-color: #323dd8;
+  }
+  
+  .leg-label {
+    bottom: 21%;
+    left: 1%;
+    background-color: #06b6d4;
+  }
+ 
+  

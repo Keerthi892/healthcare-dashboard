@@ -1,0 +1,101 @@
+body {
+  padding: 10px;
+  margin: 0; /* optional, reset default margin */
+  box-sizing: border-box; /* ensures padding doesn't increase total width */
+}
+
+.dashboard-main {
+  display: flex;
+  flex-grow: 1;
+  height: 100vh; /* full viewport height */
+  /* Removed overflow: hidden to allow scroll in children */
+  /* overflow: hidden; */
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 0px;
+  overflow-y: auto; /* scroll if content too big */
+  /* padding:20px; */
+}
+
+.right-panel {
+  width: 480px;
+  height: 100vh; /* fix height to enable scroll */
+  overflow-y: auto; /* FIX: was 'scrollody' typo */
+  background-color: #f9f9f9;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-main {
+    flex-direction: column;
+    height: auto; /* flexible height on small screens */
+  }
+
+  .right-panel {
+    width: 100%;
+    height: auto; /* no fixed height on small screens */
+    padding: 10px;
+  }
+}
+
+.diagram-and-cards {
+  display: flex;
+  /* gap: 30px;           space between the two */
+  margin-bottom: 0px;
+  align-items: stretch; /* equal height */
+}
+
+.diagram-and-cards > * {
+  flex: 1 1 0;         /* equal width and flexible */
+  background: #fff;
+  padding: 0px;
+  border-radius: 16px;
+  /* box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.06); */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .diagram-and-cards {
+    flex-direction: column;
+  }
+
+  .diagram-and-cards > * {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 8px;
+}
+
+/* Hide scrollbar globally but keep scrolling */
+html, body {
+  overflow: auto;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE 10+ */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, Edge */
+}
+/* Hide scrollbars globally but keep scrolling */
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  display: none;
+}
