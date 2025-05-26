@@ -1,8 +1,11 @@
 import React from 'react';
 import './Sidebar.css';
-import { FaTachometerAlt, FaHistory, FaCalendarAlt, FaStethoscope, FaChartBar, FaVial, FaComments, FaLifeRing, FaCog } from 'react-icons/fa';
+import {
+  FaTachometerAlt, FaHistory, FaCalendarAlt, FaStethoscope, FaChartBar,
+  FaVial, FaComments, FaLifeRing, FaCog
+} from 'react-icons/fa';
 
-const Sidebar = () => {
+const Sidebar = ({ activeItem, setActiveItem }) => {
   const generalItems = [
     { name: "Dashboard", icon: <FaTachometerAlt /> },
     { name: "History", icon: <FaHistory /> },
@@ -21,8 +24,13 @@ const Sidebar = () => {
     <div className="sidebar">
       <h3>General</h3>
       <ul>
-        {generalItems.map((item, index) => (
-          <li key={index}>
+        {generalItems.map((item) => (
+          <li
+            key={item.name}
+            className={`sidebar-item ${activeItem === item.name ? 'active' : ''}`}
+            onClick={() => setActiveItem(item.name)}
+            style={{ cursor: 'pointer' }}
+          >
             <span className="icon">{item.icon}</span>
             {item.name}
           </li>
@@ -31,8 +39,13 @@ const Sidebar = () => {
 
       <h3>Tools</h3>
       <ul>
-        {toolsItems.map((item, index) => (
-          <li key={index}>
+        {toolsItems.map((item) => (
+          <li
+            key={item.name}
+            className={`sidebar-item ${activeItem === item.name ? 'active' : ''}`}
+            onClick={() => setActiveItem(item.name)}
+            style={{ cursor: 'pointer' }}
+          >
             <span className="icon">{item.icon}</span>
             {item.name}
           </li>
@@ -40,7 +53,11 @@ const Sidebar = () => {
       </ul>
 
       <div className="settings">
-        <li>
+        <li
+          className={`sidebar-item ${activeItem === 'Settings' ? 'active' : ''}`}
+          onClick={() => setActiveItem('Settings')}
+          style={{ cursor: 'pointer' }}
+        >
           <span className="icon"><FaCog /></span>
           Settings
         </li>

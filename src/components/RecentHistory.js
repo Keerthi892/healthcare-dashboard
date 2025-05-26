@@ -2,9 +2,9 @@ import React from 'react';
 import './RecentHistory.css';
 
 const historyData = [
-  { name: 'John D.', action: 'Checked In', date: '24-May-25', time: '10:15 AM' },
-  { name: 'Alice K.', action: 'Cancelled Visit', date: '24-May-25', time: '9:30 AM' },
-  { name: 'Bob M.', action: 'Booked Appointment', date: '23-May-25', time: '4:00 PM' },
+  { name: 'Cameron D.', action: 'Checked In', date: '24-May-25', time: '10:15 AM' },
+  { name: 'Priya K.', action: 'Cancelled Visit', date: '24-May-25', time: '9:30 AM' },
+  { name: 'Andrea M.', action: 'Booked Appointment', date: '23-May-25', time: '4:00 PM' },
   { name: 'Sara P.', action: 'Checked Out', date: '22-May-25', time: '1:10 PM' },
 ];
 
