@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import DashboardCards from './components/DashboardCards';
@@ -15,7 +15,31 @@ import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('Dashboard');
+  const [scrolledToBottom, setScrolledToBottom] = useState(false);
+  const calendarRef = useRef(null);
 
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      if (scrollTop + windowHeight >= docHeight - 50) {
+        setScrolledToBottom(true);
+      } else {
+        setScrolledToBottom(false);
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (scrolledToBottom) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    }
+  };
 
   const highlightNotifications = activeSection === 'Chat';
 
@@ -24,45 +48,36 @@ function App() {
       <Header />
       <div className="dashboard-main">
         <Sidebar activeItem={activeSection} setActiveItem={setActiveSection} />
-
         <div className="content-area">
           <div className={`diagram-and-cards ${activeSection === 'Dashboard' ? 'highlight' : ''}`}>
             <BodyDiagram />
             <DashboardCards />
           </div>
-
           <div className={`${activeSection === 'Statistics' ? 'highlight' : ''}`}>
             <ActivityChart />
             <PatientBarChart />
           </div>
-
           <div className={`${activeSection === 'History' ? 'highlight' : ''}`}>
             <RecentHistory />
           </div>
-
         </div>
-
         <div className="right-panel">
-        <div className={`${activeSection === 'Calendar' ? 'highlight' : ''}`}>
+          <div ref={calendarRef} className={`${activeSection === 'Calendar' ? 'highlight' : ''}`}>
             <CalendarCard />
           </div>
-          
           <div className={`${activeSection === 'Appointments' ? 'highlight' : ''}`}>
-          <SchedulePanel />
+            <SchedulePanel />
           </div>
           <div className={`${activeSection === 'Chat' ? 'highlight' : ''}`}>
-          <NotificationsPanel />
+            <NotificationsPanel />
           </div>
-          
-
-          <div className={highlightNotifications ? 'highlight' : ''}>
-            
-          </div>
-
-          {/* <ChatPanel /> */}
+          <div className={highlightNotifications ? 'highlight' : ''}></div>
           <DonutChart />
         </div>
       </div>
+      <button className="scroll-down-btn" onClick={handleScroll}>
+        {scrolledToBottom ? '↑ Scroll Up' : '↓ Scroll Down'}
+      </button>
     </div>
   );
 }
